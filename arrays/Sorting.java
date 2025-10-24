@@ -6,11 +6,15 @@ public class Sorting {
     public static void main(String[] args) {
         int[] arr = { 10, 3, 45, 22, 9, 11 };
         bubbleSort(arr);
-        System.out.println(Arrays.toString(arr));
+        System.out.println("Bubble Sort:: " + Arrays.toString(arr));
 
         arr = new int[] { 10, 3, 45, 22, 9, 11 };
         selectionSort(arr);
-        System.out.println(Arrays.toString(arr));
+        System.out.println("Selection Sort:: " + Arrays.toString(arr));
+
+        arr = new int[] { 10, 3, 45, 22, 9, 11 };
+        insertionSort(arr);
+        System.out.println("Insertion Sort:: " + Arrays.toString(arr));
     }
 
     private static void bubbleSort(int[] arr) {
@@ -36,6 +40,18 @@ public class Sorting {
             int temp = arr[i];
             arr[i] = arr[smallestElem];
             arr[smallestElem] = temp;
+        }
+    }
+
+    private static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = key;
         }
     }
 }
