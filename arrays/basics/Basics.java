@@ -18,7 +18,7 @@ public class Basics {
         // }
 
         if (arr2[0] instanceof Object) {
-            System.out.println("value inside arr2 is an object.");
+            System.out.println("this works because value inside arr2 is an object.");
         }
     }
 }
