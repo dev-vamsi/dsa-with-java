@@ -13,7 +13,7 @@ public class Inputs {
 
         int sum = 0;
         for (int num : arr) {
-            sum += num;
+            sum = sum + num;
         }
         // System.out.printf("Sum:: %d", sum);
         System.out.println("Sum: " + sum);
